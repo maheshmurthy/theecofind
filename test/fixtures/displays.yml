@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  product_id: MyString
+  display_type: MyString
+  expiry: 2010-05-29 10:11:48
+
+two:
+  product_id: MyString
+  display_type: MyString
+  expiry: 2010-05-29 10:11:48

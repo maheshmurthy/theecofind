@@ -1,0 +1,46 @@
+<style type="text/css">
+  .p-image {
+    width: 100px;
+    padding: 4px;
+    margin: auto;
+  }
+
+  .p-image a:link, .p-image a:visited {
+    color: white;
+  }
+
+  .product {
+    border: #D9DBD9 1px solid;
+    width: 125px;
+    height: 125px;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .p-info {
+    width: 120px;
+  }
+
+  .p-price {
+    float: right;
+    padding-right: 5px;
+  }
+
+  .p-name {
+    float: left;
+    padding-left: 5px;
+  }
+
+  .p-name a:link, .p-name a:visited {
+    color: #4B4C4B;
+    text-decoration: none;
+  }
+</style>
+<% product = display.product %>
+<div class='product'>
+    <div class='p-image'><%= link_to image_tag(product.image, :width => '90', :height => '90'), product.link %></div>
+    <div class='p-info'>
+      <div class="p-name"><%= link_to trim(product.name, 8), product.link %></div>
+      <div class="p-price"><%= number_to_currency product.price %></div>
+    </div>
+</div>

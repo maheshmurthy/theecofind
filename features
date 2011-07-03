@@ -1,0 +1,32 @@
+Make an initial list of sites to scrape
+Write the scraper for each site
+Create a nightly job to go and scrape all the sites.
+Cache the scraped pages/results
+Create a frontend - slick UI, nice comparison feature, kayakish
+Email the companies and ask if they have any kind of api
+Build a notification system to see if something is broken
+Build a notification system which vendors can easily use to let me know the change in price and so on?
+Track what people are searching for
+Track what people clicked on
+Add review link?
+Sort by price, sort by ??
+Ads
+Featured products
+Blog
+Add feedback link
+Since you searched for this, you might also like these products - Only after they signup. Signup like groupon
+Notify users when you add some product they are interested in. 
+Popular searches by week, month, day
+Gift registry
+Figure out a way to sell things on the site - Strike a deal with the vendors. Make it explicit on the site that customers have to contact vendors directly
+Add twitter/facebook/stumbleupon
+Add bread crumb for navigation
+Breakdown by price
+Breakdown by most popular
+With all the content your build, create an ad serving platform which vendors can give to users to embed in their website, advertize anywhere and everywhere.
+-------------------
+Use mixpanel free
+-------------------
+When search returns no results, put a text box right there for them to tell you what they would like to see
+Put a link on homepage for products they love to see
+Start with a small niche group and then expand

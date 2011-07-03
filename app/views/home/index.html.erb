@@ -1,0 +1,11 @@
+<div class="display-bar">Featured Products</div>
+<div class="display">
+<% featured_products = @product_map['featured'] %>
+<%= render :partial => 'display', :collection => featured_products %>
+</div>
+
+<div class="display-bar">Recently Added Products</div>
+<div class="display">
+<% recent_products = @product_map['recent'] %>
+<%= render :partial => 'display', :collection => recent_products %>
+</div>

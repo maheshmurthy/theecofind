@@ -1,0 +1,14 @@
+<div id="header">
+  <a href=<%= root_url %>><div id="logo"></div></a>
+  <div id="top-menu">
+    <a href="/contact">Contact </a>
+    <a href="http://blog.theecofind.com">Blog</a>
+    <% if current_user %>
+      <span class="name-sign">Hello <%= current_user.username %>!</span>
+      <%= link_to 'Logout', logout_path %>
+    <% else %>
+      <%= link_to 'Register', register_path %>
+      <%= link_to 'Login', login_path %>
+    <% end %>
+  </div>
+</div>

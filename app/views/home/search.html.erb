@@ -1,0 +1,14 @@
+<% @product_list.each do |product|  %>
+<div class='product'>
+  <div class='product-info'>
+    <div class="price"><%= number_to_currency product.price %></div>
+    <div class="product-name"><%= link_to trim(product.name, 35), product.link %></div>
+    <div class="company-name">by <%= link_to product.company.name, company_url(product.company.name) %></div>
+  </div>
+  <div class='product-image'><%= link_to image_tag(product.image, :width => '90', :height => '90'), product.link %></div>
+</div>
+<% end %>
+<div class="flickr_pagination">
+  <div class="page_info"><%= page_entries_info @product_list %></div>
+  <%= will_paginate @product_list %>
+</div>

@@ -1,0 +1,13 @@
+<p><%= @company.name %><p>
+<%= @company.website %>
+
+<table>
+<% @product_list.products.each do |product| %>
+  <tr>
+    <td><%= image_tag(product.image, :width => '90', :height => '90') %><td>
+    <td><%= product.name %><td>
+    <td><%= product.price %><td>
+    <td><%= link_to product.link, product.link %><td>
+  </tr>
+<% end %>
+</table>

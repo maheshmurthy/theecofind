@@ -1,0 +1,26 @@
+<div class="title-bar">New user</div>
+<div class="static-content">
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username, :class => 'textbox-style' %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email, :class => 'textbox-style' %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password, :class => 'textbox-style' %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, :class => 'textbox-style' %>
+  </p>
+  <p>
+  <%= f.submit 'Register', :class => 'search-button' %>
+  </p>
+<% end %>
+</div>

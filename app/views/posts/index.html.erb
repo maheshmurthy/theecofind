@@ -1,0 +1,10 @@
+<div class="static-content">
+<% @posts.each do |post| %>
+  <div class="blog-title">
+    <%=h post.title %>
+  </div>
+  <div class="blog-body">
+    <%= post.body %>
+  </div>
+<% end %>
+</div>

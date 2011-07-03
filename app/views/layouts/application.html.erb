@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <!--[if !IE 7]>
+    <style type="text/css">
+      #wrap {display:table;height:100%}
+    </style>
+  <![endif]-->
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <%= stylesheet_link_tag "design", :media => "all", :cache => true %>
+  <%= stylesheet_link_tag "pagination", :media => "all" %>
+  <%= javascript_include_tag :all, :cache => true %>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8338109-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+  <div id="wrap">
+    <%= render :partial => "shared/header" %>
+    <div id="page-container">
+      <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+        <%= flash[:warning] || flash[:notice] %>
+      </div>
+      <div id="search-box">
+        <% form_tag({:controller => 'home', :action => 'search'}, {:method => :get}) do %>
+           <%= text_field_tag 'query', 'ex: bags, shirt', :class => 'search-text-box' %>
+           <%= submit_tag "Search", :class => "search-button" %>
+           <%= javascript_tag "Event.observe('query', 'focus', function() {if($('query').value == 'ex: bags, shirt') {$('query').clear()}});" %>
+         <% end %>
+      </div>
+      <div id="left-menu">
+        <div class="heading">Categories</div>
+        <div class="category-link"><%= link_to 'Lighting', :controller => 'tag', :action => 'products', :id => 'lighting' %></div>
+        <div class="category-link"><%= link_to 'Bags', :controller => 'tag', :action => 'products', :id => 'bags'  %></div>
+        <div class="category-link"><%= link_to 'Clothing', :controller => 'tag', :action => 'products', :id => 'clothing'  %></div>
+        <div class="category-link"><%= link_to 'Kitchen', :controller => 'tag', :action => 'products', :id => 'kitchen'  %></div>
+        <div class="category-link"><%= link_to 'Office Supplies', :controller => 'tag', :action => 'products', :id => 'office_supplies'  %></div>
+        <div class="category-link"><%= link_to 'Shoes', :controller => 'tag', :action => 'products', :id => 'shoes'  %></div>
+        <div class="category-link"><%= link_to 'Garden', :controller => 'tag', :action => 'products', :id => 'garden'  %></div>
+        <div class="category-link"><%= link_to 'Bathroom', :controller => 'tag', :action => 'products', :id => 'bathroom'  %></div>
+        <div class="category-link"><%= link_to 'Cleaning Supplies', :controller => 'tag', :action => 'products', :id => 'cleaning_supplies'  %></div>
+        <div class="category-link"><%= link_to 'Sports & Outdoor', :controller => 'tag', :action => 'products', :id => 'sports_and_outdoors' %></div>
+      </div>
+      <div id="content">
+       <%= yield %>
+      </div>
+    </div>
+  </div>
+  <%= render :partial => "shared/footer" %>
+</body>
+</html>
